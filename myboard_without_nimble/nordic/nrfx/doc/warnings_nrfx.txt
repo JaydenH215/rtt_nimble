@@ -1,0 +1,21 @@
+warning: source config_dox is not a readable file or directory... skipping.
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_spim.h:275: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_spim.h:277: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_spim.h:280: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_spim.h:287: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twi.h:294: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twi.h:295: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twi.h:296: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twi.h:297: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twi.h:302: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twi.h:303: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:314: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:315: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:316: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:317: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:322: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:323: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:324: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:326: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_twim.h:333: warning: found </span> tag without matching <span>
+D:/misc/rt-thread/rt-thread/bsp/myboard/nordic/nrfx/drivers/include/nrfx_wdt.h:91: warning: unable to resolve reference to 'NRFX_WDT_CONFIG_NO_IRQ' for \ref command
