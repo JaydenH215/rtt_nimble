@@ -1,0 +1,119 @@
+Import('rtconfig')
+from building import *
+
+cwd = GetCurrentDir()
+path = [cwd]
+src = []
+
+# nimble host
+path += [
+    cwd + '/nimble/include',
+    cwd + '/nimble/host/',
+    cwd + '/nimble/host/include',
+    cwd + '/nimble/host/src',
+    cwd + '/nimble/host/services/ans/include',
+    cwd + '/nimble/host/services/bas/include',
+    cwd + '/nimble/host/services/bleuart/include',
+    cwd + '/nimble/host/services/dis/include',
+    cwd + '/nimble/host/services/gap/include',
+    cwd + '/nimble/host/services/gatt/include',
+    cwd + '/nimble/host/services/ias/include',
+    cwd + '/nimble/host/services/ipss/include',
+    cwd + '/nimble/host/services/lls/include',
+    cwd + '/nimble/host/services/tps/include',
+    cwd + '/nimble/host/store/ram/include',
+    cwd + '/nimble/host/store/config/include',
+    cwd + '/nimble/host/util/include',
+    cwd + '/porting/nimble/include',
+    cwd + '/porting/npl/rtthread/include',
+
+    
+    cwd + '/ext/tinycrypt/include',
+    cwd + '/ext/base64/include',
+
+    cwd + '/nimble/transport/ram/include',
+   
+]
+
+src += Split('''
+    nimble/host/services/ans/src/ble_svc_ans.c
+    nimble/host/services/bas/src/ble_svc_bas.c
+    nimble/host/services/gap/src/ble_svc_gap.c
+    nimble/host/services/gatt/src/ble_svc_gatt.c
+    nimble/host/services/ias/src/ble_svc_ias.c
+    nimble/host/services/ipss/src/ble_svc_ipss.c
+    nimble/host/services/lls/src/ble_svc_lls.c
+    nimble/host/services/tps/src/ble_svc_tps.c
+    nimble/host/src/ble_att_clt.c
+    nimble/host/src/ble_att_cmd.c
+    nimble/host/src/ble_att_svr.c
+    nimble/host/src/ble_att.c
+    nimble/host/src/ble_eddystone.c
+    nimble/host/src/ble_gap.c
+    nimble/host/src/ble_gattc.c
+    nimble/host/src/ble_gatts_lcl.c
+    nimble/host/src/ble_gatts.c
+    nimble/host/src/ble_hs_adv.c
+    nimble/host/src/ble_hs_atomic.c
+    nimble/host/src/ble_hs_cfg.c
+    nimble/host/src/ble_hs_conn.c
+    nimble/host/src/ble_hs_dbg.c
+    nimble/host/src/ble_hs_flow.c
+    nimble/host/src/ble_hs.c
+    nimble/host/src/ble_hs_hci.c
+    nimble/host/src/ble_hs_hci_cmd.c
+    nimble/host/src/ble_hs_hci_evt.c
+    nimble/host/src/ble_hs_hci_util.c
+    nimble/host/src/ble_hs_id.c
+    nimble/host/src/ble_hs_log.c
+    nimble/host/src/ble_hs_mbuf.c
+    nimble/host/src/ble_hs_mqueue.c
+    nimble/host/src/ble_hs_misc.c
+    nimble/host/src/ble_hs_periodic_sync.c
+    nimble/host/src/ble_hs_pvcy.c
+    nimble/host/src/ble_hs_shutdown.c
+    nimble/host/src/ble_hs_startup.c
+    nimble/host/src/ble_hs_stop.c
+    nimble/host/src/ble_ibeacon.c
+    nimble/host/src/ble_l2cap.c
+    nimble/host/src/ble_l2cap_coc.c
+    nimble/host/src/ble_l2cap_sig.c
+    nimble/host/src/ble_l2cap_sig_cmd.c
+    nimble/host/src/ble_monitor.c
+    nimble/host/src/ble_sm_alg.c
+    nimble/host/src/ble_sm.c
+    nimble/host/src/ble_sm_cmd.c
+    nimble/host/src/ble_sm_lgcy.c
+    nimble/host/src/ble_sm_sc.c
+    nimble/host/src/ble_store.c
+    nimble/host/src/ble_store_util.c
+    nimble/host/src/ble_uuid.c
+
+    nimble/host/store/config/src/ble_store_config_conf.c
+    nimble/host/store/config/src/ble_store_config.c
+    nimble/host/store/ram/src/ble_store_ram.c
+    nimble/host/util/src/addr.c
+
+    porting/nimble/src/endian.c
+    porting/nimble/src/mem.c
+    porting/nimble/src/os_mbuf.c
+    porting/nimble/src/os_mempool.c
+    porting/nimble/src/nimble_port.c
+    porting/nimble/src/os_msys_init.c
+
+    ext/tinycrypt/src/aes_decrypt.c
+    ext/tinycrypt/src/aes_encrypt.c
+    ext/tinycrypt/src/utils.c
+
+    nimble/transport/ram/src/ble_hci_ram.c
+    porting/npl/rtthread/src/npl_os_rtthread.c
+    
+
+''')
+
+
+
+
+group = DefineGroup('nimble', src, depend = [''], CPPPATH = path)
+
+Return('group')
